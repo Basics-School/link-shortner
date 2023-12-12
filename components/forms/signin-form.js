@@ -3,9 +3,7 @@
 import Link from "next/link";
 import { Input } from "./input";
 import { useFormState } from "react-dom";
-
 import { signInWithCredential } from "@/actions/auth-action";
-import ActionButton from "./action-button";
 
 export function SignInForm() {
   const [state, action] = useFormState(signInWithCredential, null);
@@ -52,11 +50,12 @@ export function SignInForm() {
         </Link>
       </div>
 
-      <ActionButton
+      <button
+      type="submit"
         className="w-full text-foreground hover:text-white dark:text-black dark:bg-white"
       >
         Log in
-      </ActionButton>
+      </button>
     </form>
   );
 }
