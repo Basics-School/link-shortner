@@ -44,7 +44,7 @@ model User {
   emailVerified DateTime?
   image         String?
   password      String?
-  sccounts      Account[]
+  accounts      Account[]
   sessions      Session[]
   links         Link[]
 }

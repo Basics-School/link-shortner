@@ -11,6 +11,7 @@ export function SignInForm() {
     <form
       className=" w-full flex flex-col gap-y-4 "
       action={async (formaData) => {
+        console.log("hello")
         await action(formaData);
       }}
     >

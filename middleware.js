@@ -7,8 +7,8 @@ export default auth((req) => {
   const session = req.auth;
   let publicPath =
     path === "/" ||
-    path === "/signin" ||
-    path === "/signup" ||
+    path === "/sign-in" ||
+    path === "/sign-up" ||
     path === "/forgot-password" ||
     path === "/reset-password" ||
     path === "/verify-email";
@@ -16,7 +16,7 @@ export default auth((req) => {
     return NextResponse.redirect(new URL("/dashboard", req.url));
   }
   if (!session && !publicPath) {
-    return NextResponse.redirect(new URL("/signin", req.url));
+    return NextResponse.redirect(new URL("/sign-in", req.url));
   }
 });
 
