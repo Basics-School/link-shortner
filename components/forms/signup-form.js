@@ -12,7 +12,7 @@ export function SignUpForm() {
         action={async (formaData) => {
           await action(formaData);
         }}
-        className="w-full"
+        className="w-full max-w-md border p-4 rounded"
       >
         <div className="gap-2 w-full  flex flex-col  justify-center ">
           <div className="w-full flex-col flex gap-1">

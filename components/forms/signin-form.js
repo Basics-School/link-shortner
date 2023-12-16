@@ -9,7 +9,7 @@ export function SignInForm() {
   const [state, action] = useFormState(signInWithCredential, null);
   return (
     <form
-      className=" w-full flex flex-col gap-y-4 "
+      className=" w-full max-w-md  border p-4 flex flex-col gap-y-4 rounded "
       action={async (formaData) => {
         console.log("hello")
         await action(formaData);
@@ -53,7 +53,7 @@ export function SignInForm() {
 
       <button
       type="submit"
-        className="w-full text-foreground hover:text-white dark:text-black dark:bg-white"
+        className="w-full text-foreground hover:text-white py-2 rounded dark:text-black dark:bg-white"
       >
         Log in
       </button>
